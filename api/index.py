@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, request
 from fastapi.middleware.cors import CORSMiddleware
 import json
 
@@ -12,8 +12,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post('/latency')
-def region_metrics():
+@app.post('/')
+async def vessel(request:Request):
+    body = await request.json
     metrics = {
   {
     "regions": "apac",
