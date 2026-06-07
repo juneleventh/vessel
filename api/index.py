@@ -14,7 +14,7 @@ app.add_middleware(
 )
 
 @app.post('/')
-async def vessel(request: Request):
+async def latency(request: Request):
     body = await request.json
     metrics = {
   {
