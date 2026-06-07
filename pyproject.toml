@@ -1,2 +1,1 @@
-[tool.vercel] 
-entrypoint = "api.latency:app"
+ [tool.vercel] entrypoint = "api.latency:app"
