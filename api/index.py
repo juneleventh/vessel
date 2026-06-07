@@ -1,3 +1,6 @@
+[tool.vercel]
+entrypoint = "api.index:app"
+
 from fastapi import FastAPI, request
 from fastapi.middleware.cors import CORSMiddleware
 import json
@@ -13,7 +16,7 @@ app.add_middleware(
 )
 
 @app.post('/')
-async def vessel(request:Request):
+async def vessel(request: Request):
     body = await request.json
     metrics = {
   {
