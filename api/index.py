@@ -13,7 +13,7 @@ app.add_middleware(
     expose_headers=["Access-Control-Allow-Origin"],
 )
 
-@app.post('/api/latency')
+@app.post('/')
 async def latency():
     return {
         "regions": [
