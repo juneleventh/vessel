@@ -1,6 +1,3 @@
-[tool.vercel]
-entrypoint = "api.index:app"
-
 from fastapi import FastAPI, request
 from fastapi.middleware.cors import CORSMiddleware
 import json
